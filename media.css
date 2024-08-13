@@ -1,0 +1,35 @@
+@media (max-width: 1199px) {
+    .container {
+        width: 1000px;
+    }
+    .menu-list a {
+        font-size: 13px;
+    }
+    .menu-list {
+        column-gap: 14px;
+    }
+    .company-name {
+        left: -100px;
+    }
+    .specifications__box {
+        height: 183px;
+        width: 909px;
+    }
+    .techDesc p {
+        width: 140px;
+    }
+    .specifications__title {
+        margin-bottom: -2px;
+    }
+    .longLine {
+        width: 335px;
+    }
+    .business-center__box {
+        width: 326px;
+        height: 414px;
+    }
+    .additional__description {
+        width: 536px;
+        height: 30px;
+    }
+}
