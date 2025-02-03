@@ -13,11 +13,11 @@
         <div class="container">
             <nav class="main-menu">
                 <ul class="menu-list">
-                    <li><a href="#">О компании</a></li>
-                    <li><a href="#">Объекты Bereke building</a></li>
-                    <li><a href="#">Объекты BRK group</a></li>
+                    <li><a href="company-name">О компании</a></li>
+                    <li><a href="#business-center">Объекты Bereke building</a></li>
+                    <li><a href="#gallery">Объекты BRK group</a></li>
                     <li><a href="#">Наши партнеры</a></li>
-                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#footer">Контакты</a></li>
                 </ul>
                 <div class="contact-bar">
                     <button class="address">
@@ -34,7 +34,7 @@
                     </button>
                 </div>
             </nav>
-            <div class="company-name">
+            <div id="company-name" class="company-name">
                 <div class="gorizontLine"></div>
                 <h2 class="company-name__name">BRK GROUP</h2>
             </div>
@@ -116,7 +116,7 @@
                 </div>
         </section>
         <section class="about-section">
-            <div class="business-center">
+            <div id="business-center" class="business-center">
                 <img class="business-center__image" src="./images/Triumph.png" alt="">
                 <div class="container">
                     <div class="business-center__box">
@@ -168,7 +168,7 @@
             </div>
             <div class="location-map"></div>
         </section>
-        <section class="gallery">
+        <section id="gallery" class="gallery">
             <h1 class="gallery__title">Фотогалерея</h1>
             <div class="swiper">
                 <img class="swiper-button-nextt" src="././icons/arrow-left-fill (1).png" alt="arrowLeft">
@@ -207,49 +207,58 @@
         </section>
         <section class="feedback">
             <div class="container">
-                <form class="form" action="">
+                <form class="form" action="" method="POST">
                     <h1 class="feedback-title">Свяжитесь с нами</h1>
+                    
                     <div class="data-entry">
-                        <div class="name">
+                        <label for="username" class="name">
                             <img src="./icons/user-03.png" alt="user">
-                            <input placeholder="Имя" type="text">
-                        </div>
-                        <div class="number">
+                            <input id="username" placeholder="Имя" type="text" name="username" >
+                        </label>
+                
+                        <label for="phone" class="number">
                             <img src="./icons/phone.png" alt="phone">
-                            <input placeholder="(+996)" type="number">
-                        </div>
+                            <input id="phone" placeholder="(+996)" type="tel" name="phone"  >
+                        </label>
                     </div>
+                
                     <div class="info">
-                        <img src="./icons/Lock.png" alt="">
+                        <img src="./icons/Lock.png" alt="lock">
                         <p>Мы обеспечиваем надежность Ваших персональных данных</p>
                     </div>
-                    <button class="btn-send">отправить</button>
-                </form>
+                
+                    <input type="hidden" name="honeypot" value=""> 
+                
+                    <button class="btn-send" type="submit">Отправить</button>
+                </form>                
             </div>
         </section>
-        <footer class="footer">
+        <footer id="footer" class="footer">
             <div class="container">
-                <form class="formFooter">
-                    <div class="nameForm">
-                        <img src="./icons/user-03 (1).png" alt="user">
-                        <input placeholder="Имя" type="text">
-                    </div>
-                    <div class="numberForm">
-                        <img src="./icons/phone (1).png" alt="phone">
-                        <input placeholder="(+996)" type="number">
-                    </div>
+                <form class="formFooter" action="" method="POST">
+                        <label for="footer-username" class="nameForm">
+                            <img src="./icons/user-03 (1).png" alt="user">
+                            <input id="footer-username" placeholder="Имя" type="text" name="username" >
+                        </label>
+                
+                        <label for="footer-phone" class="numberForm">
+                            <img src="./icons/phone (1).png" alt="phone">
+                            <input id="footer-phone" placeholder="(+996)" type="tel" name="phone">
+                        </label>
+                
                     <p>Мы обеспечиваем надежность Ваших персональных данных</p>
-                    <button class="btn-sendFooter">отправить</button>
-                </form>
+                
+                    <button class="btn-sendFooter" type="submit">Отправить</button>
+                </form>                
                 <div class="aboutUs">
                     <div class="navigate">
                         <h2>Навигация</h2>
                         <ul>
-                            <li><a href="#">Объекты Bereke building</a></li>
-                            <li><a href="#">О компании</a></li>
-                            <li><a href="#">Объекты BRK group</a></li>
+                            <li><a href="#business-center">Объекты Bereke building</a></li>
+                            <li><a href="#company-name">О компании</a></li>
+                            <li><a href="#gallery">Объекты BRK group</a></li>
                             <li><a href="#">Наши партнеры</a></li>
-                            <li><a href="#">Контакты</a></li>
+                            <li><a href="#footer">Контакты</a></li>
                         </ul>
                     </div>
                     <div class="navigate">
@@ -279,8 +288,8 @@
           slidesPerView: 3,
           direction: getDirection(),
           navigation: {
-            nextEl: '.swiper-button-nextt',
-            prevEl: '.swiper-button-prevv',
+            nextEl: '.swiper-button-prevv',
+            prevEl: '.swiper-button-nextt',
           },
           on: {
             resize: function () {
